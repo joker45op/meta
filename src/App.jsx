@@ -55,7 +55,7 @@ const orbitControls = new OrbitControls(camera,renderer.domElement)
 // character
 let character 
 const loader = new GLTFLoader()
-loader.load('src/assets/character/scene.gltf',
+loader.load('/src/assets/character/scene.gltf',
   (obj) => {
     character = obj.scene
     character.position.y = 0.005
