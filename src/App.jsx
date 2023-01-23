@@ -73,7 +73,7 @@ loader.load('/src/assets/character/scene.gltf',
 
 // road blocks
 function create_road(x,z){
-  const texture = new THREE.TextureLoader().load('src/assets/road.png')
+  const texture = new THREE.TextureLoader().load('/src/assets/road.png')
   const road = new THREE.Mesh(
     new THREE.BoxGeometry(0.5, 0.001, 0.5),
     new THREE.MeshBasicMaterial({map:texture})
