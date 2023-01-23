@@ -1,6 +1,6 @@
 import './App.css'
 import * as THREE from 'three'
-import { PointLight } from 'three//lights/PointLight'
+import { PointLight } from 'three/src/lights/PointLight'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import { GridHelper , PointLightHelper } from 'three'
@@ -73,7 +73,7 @@ loader.load('/assets/character/scene.gltf',
 
 // road blocks
 function create_road(x,z){
-  const texture = new THREE.TextureLoader().load('/assets/road.png')
+  const texture = new THREE.TextureLoader().load('/src/assets/road.png')
   const road = new THREE.Mesh(
     new THREE.BoxGeometry(0.5, 0.001, 0.5),
     new THREE.MeshBasicMaterial({map:texture})
@@ -108,23 +108,23 @@ function create_building(path,x,y,z,scale,ry = Math.PI){
     (err) => { }
   )
 }
-create_building('/assets/building1/scene.gltf',1.5,0.001,0,0.012)
-create_building('/assets/building1/scene.gltf',1.5,0.001,1.6,0.012)
-// create_building('/assets/building1/scene.gltf', 1.5, 0.001, 3.2,0.012)
-// create_building('/assets/building1/scene.gltf',1.5,0.001,4.8,0.012)
-create_building('/assets/building1/scene.gltf',1.5,0.001,-1.6,0.012)
-create_building('/assets/building1/scene.gltf',1.5,0.001,-3.2,0.012)
+create_building('src/assets/building1/scene.gltf',1.5,0.001,0,0.012)
+create_building('src/assets/building1/scene.gltf',1.5,0.001,1.6,0.012)
+// create_building('src/assets/building1/scene.gltf', 1.5, 0.001, 3.2,0.012)
+// create_building('src/assets/building1/scene.gltf',1.5,0.001,4.8,0.012)
+create_building('src/assets/building1/scene.gltf',1.5,0.001,-1.6,0.012)
+create_building('src/assets/building1/scene.gltf',1.5,0.001,-3.2,0.012)
 
-create_building('/assets/low_poly_building (1)/scene.gltf',-1.35 ,0.001,0,0.3,0)
-create_building('/assets/low_poly_building (1)/scene.gltf',-1.35 ,0.001,1.6,0.3,0)
-// create_building('/assets/low_poly_building (1)/scene.gltf', -1.35 , 0.001, 3.2,0.3,0)
-// create_building('/assets/low_poly_building (1)/scene.gltf',-1.35 ,0.001,4.8,0.3,0)
-create_building('/assets/low_poly_building (1)/scene.gltf',-1.35 ,0.001,-1.6,0.3,0)
-create_building('/assets/low_poly_building (1)/scene.gltf',-1.35 ,0.001,-3.2,0.3,0)
+create_building('src/assets/low_poly_building (1)/scene.gltf',-1.35 ,0.001,0,0.3,0)
+create_building('src/assets/low_poly_building (1)/scene.gltf',-1.35 ,0.001,1.6,0.3,0)
+// create_building('src/assets/low_poly_building (1)/scene.gltf', -1.35 , 0.001, 3.2,0.3,0)
+// create_building('src/assets/low_poly_building (1)/scene.gltf',-1.35 ,0.001,4.8,0.3,0)
+create_building('src/assets/low_poly_building (1)/scene.gltf',-1.35 ,0.001,-1.6,0.3,0)
+create_building('src/assets/low_poly_building (1)/scene.gltf',-1.35 ,0.001,-3.2,0.3,0)
 
 
 // image holder
-const stand_texture = new THREE.TextureLoader().load('/assets/streetview/stand.jpg')
+const stand_texture = new THREE.TextureLoader().load('src/assets/streetview/stand.jpg')
 const stand = new THREE.Mesh(
   new THREE.BoxGeometry(0.5, 0.001, 0.5),
   new THREE.MeshBasicMaterial({map:stand_texture})
@@ -144,13 +144,13 @@ function animate() {
       if (document.body.lastChild.tagName === 'CANVAS') {
         document.body.removeChild(document.body.lastChild)
         const img1 = document.createElement("img")
-        img1.src = "/assets/streetview/img1.jpeg"
+        img1.src = "src/assets/streetview/img1.jpeg"
         document.body.appendChild(img1)
         const img2 = document.createElement("img")
-        img2.src = "/assets/streetview/img2.jpeg"
+        img2.src = "src/assets/streetview/img2.jpeg"
         document.body.appendChild(img2)
         const img3 = document.createElement("img")
-        img3.src = "/assets/streetview/img3.jpeg"
+        img3.src = "src/assets/streetview/img3.jpeg"
         document.body.appendChild(img3)
       }
     }
