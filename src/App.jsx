@@ -55,7 +55,7 @@ const gridHelper = new GridHelper(10, 50)
 // character
 let character 
 const loader = new GLTFLoader()
-loader.load('/src/assets/character/scene.gltf',
+loader.load('/assets/character/scene.gltf',
   (obj) => {
     character = obj.scene
     character.position.y = 0.005
