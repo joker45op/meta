@@ -49,7 +49,7 @@ const gridHelper = new GridHelper(10, 50)
 // scene.add(gridHelper)
 
 // orbit controls
-const orbitControls = new OrbitControls(camera,renderer.domElement)
+// const orbitControls = new OrbitControls(camera,renderer.domElement)
 // scene.add(orbitControls)
 
 // character
